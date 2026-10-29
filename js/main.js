@@ -1,4 +1,4 @@
-// Skia Shades Solutions: small, dependency-free scripts.
+// Skia Shading Solutions: small, dependency-free scripts.
 
 // ---------- Mobile menu ----------
 const menuButton = document.querySelector('.menu-toggle');
