@@ -126,12 +126,14 @@ form.addEventListener('submit', (e) => {
     return;
   }
 
+  // t() gives the Greek wording when the visitor has switched the page to Greek
+  const { t } = window.skiaI18n;
   const lines = [
-    `Hi Skia, I'd like a quote.`,
-    `Name: ${name}`,
-    data.get('area').trim() && `Area: ${data.get('area').trim()}`,
-    `Interested in: ${data.get('product')}`,
-    data.get('message').trim() && `About the space: ${data.get('message').trim()}`,
+    t(`Hi Skia, I'd like a quote.`),
+    `${t('Name:')} ${name}`,
+    data.get('area').trim() && `${t('Area:')} ${data.get('area').trim()}`,
+    `${t('Interested in:')} ${t(data.get('product'))}`,
+    data.get('message').trim() && `${t('About the space:')} ${data.get('message').trim()}`,
   ].filter(Boolean);
 
   const url = `https://wa.me/${form.dataset.whatsapp}?text=${encodeURIComponent(lines.join('\n'))}`;

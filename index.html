@@ -48,14 +48,22 @@
           <img src="images/skia-logo.svg" alt="" width="104" height="70" />
         </a>
 
-        <button
-          class="menu-toggle"
-          aria-expanded="false"
-          aria-controls="site-nav"
-        >
-          <span class="menu-toggle-bars" aria-hidden="true"></span>
-          <span class="sr-only">Menu</span>
-        </button>
+        <div class="header-tools">
+          <!-- Language switch: texts are swapped by js/i18n.js -->
+          <div class="lang-switch" role="group" aria-label="Language">
+            <button type="button" data-lang="en" lang="en" aria-label="English" aria-pressed="true">EN</button>
+            <button type="button" data-lang="el" lang="el" aria-label="Ελληνικά" aria-pressed="false">ΕΛ</button>
+          </div>
+
+          <button
+            class="menu-toggle"
+            aria-expanded="false"
+            aria-controls="site-nav"
+          >
+            <span class="menu-toggle-bars" aria-hidden="true"></span>
+            <span class="sr-only">Menu</span>
+          </button>
+        </div>
 
         <nav id="site-nav" class="site-nav" aria-label="Main">
           <ul>
@@ -499,11 +507,12 @@
             <div class="field">
               <label for="f-product">What are you interested in?</label>
               <select id="f-product" name="product">
-                <option>Not sure yet</option>
-                <option>Folding arm awning</option>
-                <option>Lateral arm awning</option>
-                <option>Vertical awning</option>
-                <option>Blinds</option>
+                <!-- value stays English so the buttons above can select it in any language -->
+                <option value="Not sure yet">Not sure yet</option>
+                <option value="Folding arm awning">Folding arm awning</option>
+                <option value="Lateral arm awning">Lateral arm awning</option>
+                <option value="Vertical awning">Vertical awning</option>
+                <option value="Blinds">Blinds</option>
               </select>
             </div>
 
@@ -543,6 +552,7 @@
       </div>
     </footer>
 
+    <script src="js/i18n.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>
