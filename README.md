@@ -1,6 +1,6 @@
-# Skia Shading Solutions website
+# Skia Shades Solutions website
 
-One-page site for Skia Shading Solutions, awnings and blinds in Nicosia, Cyprus.
+One-page site for Skia Shades Solutions, awnings and blinds in Nicosia, Cyprus.
 Plain HTML, CSS and JavaScript. No build step, no frameworks.
 
 ## Files
