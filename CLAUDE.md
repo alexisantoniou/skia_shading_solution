@@ -1,6 +1,6 @@
 # Skia Shading Solutions – website
 
-- Business: shading company in Cyprus (folding arm awnings, lateral arm awnings, blinds)
+- Business: shading company in Cyprus (folding arm awnings, capotina awnings, awnings with support arms and a roller tube, vertical awnings, blinds; also awning repairs and fabric replacement)
 - Logo files: images/skia-logo.svg, skia-logo-light.svg (for dark backgrounds), favicon-32.png, apple-touch-icon.png
 - Tagline: "SHADING SOLUTIONS"
 - Colours:

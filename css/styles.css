@@ -282,6 +282,27 @@ html[lang="el"] .hero h1 { max-width: 14ch; font-size: clamp(2.4rem, 4.8vw, 4rem
   width: .55rem; height: .55rem; border-radius: 50%; background: var(--sun);
 }
 .panel-body .btn { margin-top: auto; align-self: flex-start; }
+/* A small (low resolution) photo: keep its natural 4:3 shape instead of
+   stretching it to the full height of the panel, so it is enlarged less */
+.chooser-panel-lowres .panel-media { align-self: center; }
+.chooser-panel-lowres .panel-media img { height: auto; min-height: 0; aspect-ratio: 4 / 3; }
+
+/* A panel with no photo: the text uses the full width */
+.chooser-panel-text { grid-template-columns: 1fr; }
+.chooser-panel-text .panel-body > p { max-width: 38rem; }
+
+/* "Already have an awning?" strip under the chooser */
+.repair {
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
+  gap: 1.25rem 2rem;
+  margin-top: clamp(1.5rem, 3vw, 2.5rem);
+  padding: clamp(1.25rem, 3vw, 2rem) clamp(1.25rem, 3vw, 2.25rem);
+  background: var(--white);
+  border-radius: var(--radius);
+  border-left: 4px solid var(--sun);
+}
+.repair h3 { font-size: 1.4rem; font-weight: 700; }
+.repair p { margin-top: .4rem; color: var(--slate); max-width: 38rem; }
 
 @media (prefers-reduced-motion: no-preference) {
   .chooser-panel:not([hidden]) { animation: panel-in .3s ease both; }
@@ -429,6 +450,8 @@ html[lang="el"] .hero h1 { max-width: 14ch; font-size: clamp(2.4rem, 4.8vw, 4rem
     padding: .85rem 1rem;
   }
   .chooser-tabs button[aria-selected="true"] { border-top-color: var(--sun); }
+  /* five tabs in two columns: let the odd one out span the full row */
+  .chooser-tabs button:nth-child(odd):last-child { grid-column: 1 / -1; }
   .steps { grid-template-columns: 1fr 1fr; }
 }
 

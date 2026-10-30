@@ -14,8 +14,8 @@
     // ----- Page title + sharing text (<head>) -----
     "Skia Shading Solutions | Awnings and blinds in Nicosia":
       "Skia Shading Solutions | Τέντες και στόρια στη Λευκωσία",
-    "Folding arm awnings, side awnings, vertical awnings and blinds, measured and installed across Nicosia, Cyprus.":
-      "Τέντες με πτυσσόμενους βραχίονες, πλαϊνές τέντες, κάθετες τέντες και στόρια, με μέτρηση και τοποθέτηση σε όλη τη Λευκωσία, Κύπρο.",
+    "Folding arm, capotina and vertical awnings, blinds, plus awning repairs and new fabrics, measured and installed across Nicosia, Cyprus.":
+      "Τέντες με πτυσσόμενους βραχίονες, καποτίνες και κάθετες τέντες, στόρια, καθώς και επισκευές τεντών και νέα υφάσματα, με μέτρηση και τοποθέτηση σε όλη τη Λευκωσία, Κύπρο.",
     "Awnings and blinds, measured and installed across Nicosia.":
       "Τέντες και στόρια, με μέτρηση και τοποθέτηση σε όλη τη Λευκωσία.",
 
@@ -49,9 +49,12 @@
     "Choose where you need shade": "Επιλέξτε πού χρειάζεστε σκιά",
     "Over a terrace or balcony": "Πάνω από βεράντα ή μπαλκόνι",
     "Folding arm awning": "Τέντα με πτυσσόμενους βραχίονες",
-    "Along the side of a patio": "Στην πλευρά μιας αυλής",
-    "Lateral arm awning": "Τέντα πλαϊνού βραχίονα",
-    "Around a veranda or pergola": "Γύρω από βεράντα ή πέργκολα",
+    "Over a door or window": "Πάνω από πόρτα ή παράθυρο",
+    "Capotina awning": "Τέντα καποτίνα",
+    "Over a patio or shop front": "Πάνω από αυλή ή βιτρίνα καταστήματος",
+    "Awning with support arms and roller tube":
+      "Τέντα με βραχίονες στήριξης και σωλήνα ρολού",
+    "Around a balcony or pergola": "Γύρω από μπαλκόνι ή πέργκολα",
     "Vertical awning": "Κάθετη τέντα",
     "Inside, at the windows": "Μέσα, στα παράθυρα",
     Blinds: "Στόρια",
@@ -68,17 +71,24 @@
     "Balconies with no roof above": "Μπαλκόνια χωρίς στέγη από πάνω",
     "Café and restaurant seating": "Καθιστικά καφέ και εστιατορίων",
 
-    "Grey lateral arm awning screening the side of a garden seating area":
-      "Γκρι τέντα πλαϊνού βραχίονα που προστατεύει την πλευρά ενός χώρου καθιστικού στον κήπο",
-    "A screen that pulls out sideways from a wall-mounted cassette and hooks onto a post. It blocks low evening sun, wind and the neighbours' view, then rolls away in seconds.":
-      "Πανί που ανοίγει πλάγια από κασετίνα στον τοίχο και πιάνει πάνω σε κολώνα. Κόβει τον χαμηλό απογευματινό ήλιο, τον αέρα και τη θέα των γειτόνων, και μαζεύεται σε δευτερόλεπτα.",
-    "Privacy between patios and gardens":
-      "Ιδιωτικότητα ανάμεσα σε αυλές και κήπους",
-    "Low sun late in the afternoon": "Χαμηλός ήλιος αργά το απόγευμα",
-    "Windy corners and rooftops": "Γωνιές και ταράτσες με αέρα",
+    "Green and white striped capotina awning over a window with green shutters":
+      "Πράσινη και λευκή ριγέ τέντα καποτίνα πάνω από παράθυρο με πράσινα παντζούρια",
+    "A hooded fabric canopy that sits over a door or window. It keeps the sun off the entrance or the glass, and gives the front of a home or shop a finished look.":
+      "Υφασμάτινο στέγαστρο σε σχήμα κουκούλας πάνω από πόρτα ή παράθυρο. Κρατά τον ήλιο μακριά από την είσοδο ή το τζάμι και δίνει ολοκληρωμένη όψη στην πρόσοψη ενός σπιτιού ή καταστήματος.",
+    "Front doors and entrances": "Εξώπορτες και είσοδοι",
+    "Windows that face the sun": "Παράθυρα που βλέπουν στον ήλιο",
+    "Shop fronts": "Προσόψεις καταστημάτων",
 
-    "Vertical awnings lowered around a covered veranda while children play in the garden":
-      "Κάθετες τέντες κατεβασμένες γύρω από σκεπαστή βεράντα ενώ παιδιά παίζουν στον κήπο",
+    "The fabric winds onto a roller tube, and support arms hold the awning out from the wall when it is open. A simple, practical shade for patios, entrances and shop fronts.":
+      "Το ύφασμα τυλίγεται σε σωλήνα ρολού και οι βραχίονες στήριξης κρατούν την τέντα μακριά από τον τοίχο όταν είναι ανοιχτή. Μια απλή, πρακτική λύση σκίασης για αυλές, εισόδους και προσόψεις καταστημάτων.",
+    "Patios and entrances": "Αυλές και είσοδοι",
+    "Walls and windows that get strong sun":
+      "Τοίχοι και παράθυρα με έντονο ήλιο",
+
+    "White vertical awning lowered across the open side of a terrace by the sea":
+      "Λευκή κάθετη τέντα κατεβασμένη στην ανοιχτή πλευρά μιας βεράντας δίπλα στη θάλασσα",
+    "Dark vertical awnings enclosing a terrace with planters":
+      "Σκούρες κάθετες τέντες που κλείνουν μια βεράντα με γλάστρες",
     "A screen that drops straight down from above and runs in side channels, so it stays in place. It closes the open sides of a veranda or pergola and turns it into a shaded outdoor room.":
       "Πανί που κατεβαίνει κατακόρυφα από πάνω και κινείται σε πλαϊνούς οδηγούς, ώστε να μένει στη θέση του. Κλείνει τις ανοιχτές πλευρές μιας βεράντας ή πέργκολας και την κάνει σκιερό εξωτερικό δωμάτιο.",
     "Open sides of verandas and pergolas":
@@ -98,6 +108,13 @@
     "Bedrooms that need to stay dark":
       "Υπνοδωμάτια που πρέπει να μένουν σκοτεινά",
     "Offices with screen glare": "Γραφεία με αντανάκλαση στις οθόνες",
+
+    // Repairs strip + form option
+    "Already have an awning?": "Έχετε ήδη τέντα;",
+    "We repair awnings and replace awning fabrics, so a faded or torn awning can get a second life.":
+      "Επισκευάζουμε τέντες και αντικαθιστούμε τα υφάσματά τους, ώστε μια ξεθωριασμένη ή σκισμένη τέντα να αποκτήσει δεύτερη ζωή.",
+    "Ask about a repair": "Ρωτήστε για επισκευή",
+    "Repair or new fabric": "Επισκευή ή νέο ύφασμα",
 
     // ----- Process -----
     "From first message to finished install":
