@@ -99,23 +99,6 @@
       "Υπνοδωμάτια που πρέπει να μένουν σκοτεινά",
     "Offices with screen glare": "Γραφεία με αντανάκλαση στις οθόνες",
 
-    // ----- Day to night -----
-    'Shade by day. Glow by night.': 'Σκιά τη μέρα. Φως τη νύχτα.',
-    'Add integrated LED lighting to your awning and your terrace keeps going after sunset. Slide from afternoon to evening and watch the lights come on.':
-      'Προσθέστε ενσωματωμένο φωτισμό LED στην τέντα σας και η βεράντα σας συνεχίζει και μετά τη δύση. Σύρετε από το απόγευμα στο βράδυ και δείτε τα φώτα να ανάβουν.',
-    'Turn on the evening': 'Ανάψτε το βράδυ',
-    'Back to daylight': 'Πίσω στο φως της ημέρας',
-    'Time of day': 'Ώρα της ημέρας',
-    'Day': 'Μέρα',
-    'Evening': 'Βράδυ',
-    'Ask about LED lighting in your quote.': 'Ρωτήστε για φωτισμό LED όταν ζητήσετε προσφορά.',
-    'Illustration of a terrace under a teal awning, changing from daylight to evening as LED lights along the awning switch on.':
-      'Εικονογράφηση βεράντας κάτω από πετρόλ τέντα, που περνά από το φως της ημέρας στο βράδυ καθώς ανάβουν τα φώτα LED κατά μήκος της τέντας.',
-    // read out by screen readers for the slider (set in main.js)
-    'Daylight': 'Φως ημέρας',
-    'Sunset': 'Ηλιοβασίλεμα',
-    'Evening, lights on': 'Βράδυ, αναμμένα φώτα',
-
     // ----- Process -----
     "From first message to finished install":
       "Από το πρώτο μήνυμα μέχρι την ολοκληρωμένη τοποθέτηση",

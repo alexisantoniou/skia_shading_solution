@@ -288,83 +288,6 @@ html[lang="el"] .hero h1 { max-width: 14ch; font-size: clamp(2.4rem, 4.8vw, 4rem
 }
 @keyframes panel-in { from { opacity: 0; } to { opacity: 1; } }
 
-/* ---------- Day to night (LED awning lights) ----------
-   Everything below is driven by ONE number: --night on .dn-scene
-   (0 = bright afternoon, 1 = evening). main.js changes it; CSS does the rest.
-   Each part uses calc() on --night to decide when it fades or moves. */
-.glow { padding-block: 0 var(--section); }
-.glow-grid {
-  display: grid;
-  grid-template-columns: 1fr 1.35fr;
-  gap: clamp(2rem, 5vw, 4rem);
-  align-items: center;
-}
-.glow-text h2 { font-size: clamp(2rem, 4.2vw, 3.1rem); font-weight: 700; letter-spacing: -0.015em; }
-.glow-text > p { margin-top: 1rem; color: var(--slate); max-width: 30rem; }
-.glow-note { font-size: 1rem; }
-
-.dn-scene {
-  --night: 0;
-  position: relative;
-  isolation: isolate;                 /* keep the tint blending inside the scene only */
-  aspect-ratio: 8 / 5;
-  border-radius: var(--radius);
-  overflow: hidden;
-  background: #7CC4E0;
-}
-.dn-sky, .dn-svg { position: absolute; inset: 0; width: 100%; height: 100%; }
-/* The sky is two gradients; the night one fades in on top. Only the band between
-   awning and sea (about 48% to 69% of the height) is visible. */
-.dn-sky-day {
-  background: linear-gradient(180deg, #7CC4E0 0%, #7CC4E0 46%, #BFE3EE 58%, #FDF3DC 70%, #FDF3DC 100%);
-}
-.dn-sky-night {
-  background: linear-gradient(180deg, #1F2F6B 0%, #1F2F6B 46%, #4A3F8F 56%, #C4607A 64%, #F2A52E 70%, #F2A52E 100%);
-  opacity: var(--night);
-}
-.dn-sun   { transform: translateY(calc(var(--night) * 130px)); }
-.dn-moon  { transform: translateY(calc((1 - var(--night)) * 130px)); }
-.dn-stars { opacity: calc((var(--night) - .45) * 2.2); }
-
-.dn-tint { mix-blend-mode: multiply; opacity: calc(var(--night) * .88); }
-
-.dn-wash, .dn-pool, .dn-candles { opacity: calc((var(--night) - .55) * 2.5); }
-/* LEDs switch on one after another: later ones need a higher --night to start */
-.dn-led { opacity: calc((var(--night) - .55 - var(--i) * .025) * 12); }
-
-/* Controls */
-.dn-controls { margin-top: 1.75rem; display: grid; gap: 1.1rem; max-width: 26rem; }
-.dn-controls[hidden] { display: none; }
-.dn-toggle { justify-self: start; }
-.glow[data-state="night"] .when-day,
-.glow:not([data-state="night"]) .when-night { display: none; }
-
-.dn-slider label { display: block; font-weight: 600; color: var(--teal); }
-.dn-range {
-  -webkit-appearance: none; appearance: none;
-  width: 100%; height: 44px; margin: 0;       /* 44px tall = easy to grab on a phone */
-  background: transparent; cursor: pointer;
-}
-.dn-range::-webkit-slider-runnable-track {
-  height: 10px; border-radius: 999px;
-  background: linear-gradient(90deg, #7CC4E0, #BFE3EE 25%, #C4607A 62%, #1F2F6B);
-}
-.dn-range::-moz-range-track {
-  height: 10px; border-radius: 999px;
-  background: linear-gradient(90deg, #7CC4E0, #BFE3EE 25%, #C4607A 62%, #1F2F6B);
-}
-.dn-range::-webkit-slider-thumb {
-  -webkit-appearance: none; box-sizing: border-box;
-  width: 28px; height: 28px; margin-top: -9px;
-  border-radius: 50%; background: var(--sun); border: 3px solid var(--teal);
-}
-.dn-range::-moz-range-thumb {
-  box-sizing: border-box; width: 28px; height: 28px;
-  border-radius: 50%; background: var(--sun); border: 3px solid var(--teal);
-}
-.dn-range:focus-visible { outline: 3px solid var(--sun); outline-offset: 2px; border-radius: 8px; }
-.dn-ends { display: flex; justify-content: space-between; font-size: .95rem; color: var(--slate); }
-
 /* ---------- Process (dark teal band) ---------- */
 .process {
   background: var(--teal);
@@ -555,7 +478,7 @@ html[lang="el"] .hero h1 { max-width: 14ch; font-size: clamp(2.4rem, 4.8vw, 4rem
   .site-nav ul a[aria-current="true"] { color: var(--teal-deep); box-shadow: inset 3px 0 0 var(--sun); padding-left: .85rem; }
   .site-nav .btn { padding-block: .95rem; font-size: 1.05rem; }
 
-  .hero-grid, .area-grid, .quote-grid, .glow-grid { grid-template-columns: 1fr; }
+  .hero-grid, .area-grid, .quote-grid { grid-template-columns: 1fr; }
   .hero-canopy { max-width: 440px; width: 100%; margin-inline: auto; padding: 18px 18px 0; }
   .hero-canopy::before { border-width: 12px; }
   .sun { top: 42px; }

@@ -163,7 +163,6 @@ if (!calmMotion && "IntersectionObserver" in window) {
   const revealTargets = [
     ".section-head",
     ".chooser",
-    ".glow-text",
     ".steps li", // the four steps appear one after another
     ".area-media",
     ".area-text",
@@ -194,66 +193,6 @@ if (!calmMotion && "IntersectionObserver" in window) {
     el.classList.add("reveal");
     reveal.observe(el);
   });
-}
-
-// ---------- Day to night scene ----------
-// One number, `night` (0 = afternoon, 1 = evening), is written to the CSS
-// variable --night. The CSS decides what each part of the scene does with it.
-const glow = document.querySelector('#glow');
-if (glow) {
-  const scene = glow.querySelector('.dn-scene');
-  const range = glow.querySelector('#dn-range');
-  const toggle = glow.querySelector('.dn-toggle');
-  const controls = glow.querySelector('.dn-controls');
-  const { t } = window.skiaI18n;
-  let night = 0;
-  let frame = null;      // the running animation, if any
-  let touched = false;   // true once the visitor uses the controls themselves
-
-  const setNight = (value) => {
-    night = Math.min(1, Math.max(0, value));
-    scene.style.setProperty('--night', night.toFixed(3));
-    range.value = Math.round(night * 100);
-    glow.dataset.state = night >= 0.5 ? 'night' : 'day';
-    // Screen readers announce this instead of a bare number like "37"
-    range.setAttribute(
-      'aria-valuetext',
-      t(night < 0.35 ? 'Daylight' : night < 0.6 ? 'Sunset' : 'Evening, lights on')
-    );
-  };
-
-  const stop = () => { if (frame) cancelAnimationFrame(frame); frame = null; };
-
-  // Glide from the current time of day to `target` (ease in and out)
-  const animateTo = (target, ms) => {
-    stop();
-    if (calmMotion) { setNight(target); return; }   // reduced motion: jump, no glide
-    const from = night;
-    const start = performance.now();
-    const tick = (now) => {
-      const p = Math.min(1, (now - start) / ms);
-      const eased = p < 0.5 ? 4 * p * p * p : 1 - Math.pow(-2 * p + 2, 3) / 2;
-      setNight(from + (target - from) * eased);
-      frame = p < 1 ? requestAnimationFrame(tick) : null;
-    };
-    frame = requestAnimationFrame(tick);
-  };
-
-  controls.hidden = false;   // the controls only make sense with JavaScript
-  setNight(0);
-
-  range.addEventListener('input', () => { touched = true; stop(); setNight(range.value / 100); });
-  toggle.addEventListener('click', () => { touched = true; animateTo(night < 0.5 ? 1 : 0, 2200); });
-
-  // First time the scene is mostly on screen: play the evening once, as a demo
-  if (!calmMotion && 'IntersectionObserver' in window) {
-    const watcher = new IntersectionObserver((entries) => {
-      if (!entries[0].isIntersecting) return;
-      watcher.disconnect();
-      setTimeout(() => { if (!touched) animateTo(1, 4200); }, 700);
-    }, { threshold: 0.6 });
-    watcher.observe(scene);
-  }
 }
 
 // ---------- Footer year ----------
