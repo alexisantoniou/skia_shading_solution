@@ -40,7 +40,9 @@ document.addEventListener("click", (e) => {
 });
 
 // ---------- Highlight the nav link for the section you're reading ----------
-const navLinks = [...nav.querySelectorAll("ul a")];
+// Only the in-page links (#products, #process...). The phone numbers in the
+// "Call us" list are tel: links, which are not sections and must be skipped.
+const navLinks = [...nav.querySelectorAll('ul a[href^="#"]')];
 const sections = navLinks
   .map((link) => document.querySelector(link.getAttribute("href")))
   .filter(Boolean);
