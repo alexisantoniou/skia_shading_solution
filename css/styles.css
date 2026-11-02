@@ -149,6 +149,34 @@ html[lang="el"] .hero h1 { max-width: 14ch; font-size: clamp(2.4rem, 4.8vw, 4rem
 /* Call button: icon + number */
 .btn-call svg { width: 1.1em; height: 1.1em; flex: none; }
 
+/* Call button: click it and a small list with both numbers drops down */
+.call-menu { position: relative; }
+.call-menu summary { list-style: none; user-select: none; }
+.call-menu summary::-webkit-details-marker { display: none; }  /* Safari's little triangle */
+.call-chevron { width: .95em !important; height: .95em !important; transition: transform .2s ease; }
+.call-menu[open] .call-chevron { transform: rotate(180deg); }
+.call-list {
+  position: absolute; right: 0; top: calc(100% + .5rem); z-index: 60;
+  min-width: 100%;
+  margin: 0; padding: .35rem; list-style: none;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  box-shadow: 0 14px 28px -14px color-mix(in srgb, var(--teal-deep) 45%, transparent);
+}
+.call-list a {
+  display: block; white-space: nowrap;
+  padding: .75rem 1.1rem;            /* tall enough to tap easily */
+  border-radius: 10px;
+  font-weight: 600; text-decoration: none; color: var(--teal);
+  transition: background-color .15s ease;
+}
+.call-list a:hover { background: var(--shade); }
+@media (prefers-reduced-motion: no-preference) {
+  .call-menu[open] .call-list { animation: call-drop .18s var(--ease, ease-out) both; }
+}
+@keyframes call-drop { from { opacity: 0; transform: translateY(-6px); } to { opacity: 1; transform: none; } }
+
 .menu-toggle { display: none; }
 
 /* ---------- Hero ---------- */
@@ -282,11 +310,6 @@ html[lang="el"] .hero h1 { max-width: 14ch; font-size: clamp(2.4rem, 4.8vw, 4rem
   width: .55rem; height: .55rem; border-radius: 50%; background: var(--sun);
 }
 .panel-body .btn { margin-top: auto; align-self: flex-start; }
-/* A small (low resolution) photo: keep its natural 4:3 shape instead of
-   stretching it to the full height of the panel, so it is enlarged less */
-.chooser-panel-lowres .panel-media { align-self: center; }
-.chooser-panel-lowres .panel-media img { height: auto; min-height: 0; aspect-ratio: 4 / 3; }
-
 /* A panel with no photo: the text uses the full width */
 .chooser-panel-text { grid-template-columns: 1fr; }
 .chooser-panel-text .panel-body > p { max-width: 38rem; }
@@ -367,7 +390,7 @@ html[lang="el"] .hero h1 { max-width: 14ch; font-size: clamp(2.4rem, 4.8vw, 4rem
 .contact-list { margin: 2.25rem 0 0; display: grid; gap: 1rem; }
 .contact-list div { display: grid; grid-template-columns: 7rem 1fr; align-items: baseline; }
 .contact-list dt { color: var(--slate); }
-.contact-list dd { margin: 0; font-weight: 600; font-size: 1.2rem; }
+.contact-list dd { margin: 0; font-weight: 600; font-size: 1.2rem; display: grid; gap: .25rem; justify-items: start; }
 .contact-list a { text-decoration-color: var(--sun); text-decoration-thickness: 2px; text-underline-offset: 4px; }
 
 .quote-form {
@@ -500,6 +523,10 @@ html[lang="el"] .hero h1 { max-width: 14ch; font-size: clamp(2.4rem, 4.8vw, 4rem
   .site-nav ul a:hover { background: transparent; }
   .site-nav ul a[aria-current="true"] { color: var(--teal-deep); box-shadow: inset 3px 0 0 var(--sun); padding-left: .85rem; }
   .site-nav .btn { padding-block: .95rem; font-size: 1.05rem; }
+  /* In the phone menu the numbers open inside the menu, under the button */
+  .call-menu summary { width: 100%; }
+  .call-list { position: static; margin-top: .5rem; box-shadow: none; }
+  .call-list a { text-align: center; font-size: 1.15rem; }
 
   .hero-grid, .area-grid, .quote-grid { grid-template-columns: 1fr; }
   .hero-canopy { max-width: 440px; width: 100%; margin-inline: auto; padding: 18px 18px 0; }

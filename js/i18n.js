@@ -30,7 +30,7 @@
     "How it works": "Πώς λειτουργεί",
     "Where we work": "Πού εργαζόμαστε",
     "Get a quote": "Ζητήστε προσφορά",
-    "Call 99 000 000": "Καλέστε 99 000 000",
+    "Call us": "Καλέστε μας",
 
     // ----- Hero -----
     "Make your terrace usable in July.":
@@ -62,8 +62,6 @@
     "Ask about this awning": "Ρωτήστε για αυτή την τέντα",
     "Ask about blinds": "Ρωτήστε για τα στόρια",
 
-    "Folding arm awning shading a family on a terrace sofa":
-      "Τέντα με πτυσσόμενους βραχίονες σκιάζει οικογένεια σε καναπέ βεράντας",
     "A fabric canopy on folding arms that opens out from the wall and rolls back into a compact cassette when you don't need it. The classic choice for open terraces and café fronts.":
       "Υφασμάτινο στέγαστρο σε πτυσσόμενους βραχίονες που ανοίγει από τον τοίχο και μαζεύεται σε μια συμπαγή κασετίνα όταν δεν το χρειάζεστε. Η κλασική επιλογή για ανοιχτές βεράντες και προσόψεις καφέ.",
     "South- and west-facing terraces":
@@ -71,8 +69,6 @@
     "Balconies with no roof above": "Μπαλκόνια χωρίς στέγη από πάνω",
     "Café and restaurant seating": "Καθιστικά καφέ και εστιατορίων",
 
-    "Green and white striped capotina awning over a window with green shutters":
-      "Πράσινη και λευκή ριγέ τέντα καποτίνα πάνω από παράθυρο με πράσινα παντζούρια",
     "A hooded fabric canopy that sits over a door or window. It keeps the sun off the entrance or the glass, and gives the front of a home or shop a finished look.":
       "Υφασμάτινο στέγαστρο σε σχήμα κουκούλας πάνω από πόρτα ή παράθυρο. Κρατά τον ήλιο μακριά από την είσοδο ή το τζάμι και δίνει ολοκληρωμένη όψη στην πρόσοψη ενός σπιτιού ή καταστήματος.",
     "Front doors and entrances": "Εξώπορτες και είσοδοι",
@@ -85,10 +81,6 @@
     "Walls and windows that get strong sun":
       "Τοίχοι και παράθυρα με έντονο ήλιο",
 
-    "White vertical awning lowered across the open side of a terrace by the sea":
-      "Λευκή κάθετη τέντα κατεβασμένη στην ανοιχτή πλευρά μιας βεράντας δίπλα στη θάλασσα",
-    "Dark vertical awnings enclosing a terrace with planters":
-      "Σκούρες κάθετες τέντες που κλείνουν μια βεράντα με γλάστρες",
     "A screen that drops straight down from above and runs in side channels, so it stays in place. It closes the open sides of a veranda or pergola and turns it into a shaded outdoor room.":
       "Πανί που κατεβαίνει κατακόρυφα από πάνω και κινείται σε πλαϊνούς οδηγούς, ώστε να μένει στη θέση του. Κλείνει τις ανοιχτές πλευρές μιας βεράντας ή πέργκολας και την κάνει σκιερό εξωτερικό δωμάτιο.",
     "Open sides of verandas and pergolas":
@@ -98,10 +90,6 @@
     "Keeping sun off the glass before it gets in":
       "Να μην χτυπά ο ήλιος το τζάμι πριν μπει μέσα",
 
-    "Sheer roller blinds lowered across tall living room windows":
-      "Διαφανή στόρια ρολό κατεβασμένα σε ψηλά παράθυρα σαλονιού",
-    "Black day-and-night zebra blind on a window":
-      "Μαύρο στόρι ζέβρα day-and-night σε παράθυρο",
     "Roller blinds and day-and-night (zebra) blinds, made to your window size. Choose a screen fabric that softens the light and keeps the view, or blackout for bedrooms.":
       "Στόρια ρολό και day-and-night (ζέβρα), φτιαγμένα στις διαστάσεις του παραθύρου σας. Επιλέξτε ύφασμα screen που απαλύνει το φως και κρατά τη θέα, ή blackout για τα υπνοδωμάτια.",
     "Living rooms with big windows": "Σαλόνια με μεγάλα παράθυρα",
@@ -146,7 +134,6 @@
     "Tell us a little about the space. Sending the form opens WhatsApp with your message ready, so nothing gets lost in an inbox.":
       "Πείτε μας λίγα λόγια για τον χώρο. Η αποστολή της φόρμας ανοίγει το WhatsApp με έτοιμο το μήνυμά σας, ώστε τίποτα να μη χαθεί σε κάποιο email.",
     Phone: "Τηλέφωνο",
-    "Message us": "Στείλτε μας μήνυμα",
     "Your name": "Το όνομά σας",
     "Add your name so we know who to reply to.":
       "Προσθέστε το όνομά σας για να ξέρουμε σε ποιον να απαντήσουμε.",

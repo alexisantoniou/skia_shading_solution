@@ -4,9 +4,12 @@
 const menuButton = document.querySelector(".menu-toggle");
 const nav = document.querySelector("#site-nav");
 
+const callMenu = document.querySelector(".call-menu"); // the "Call us" dropdown
+
 const closeMenu = () => {
   menuButton.setAttribute("aria-expanded", "false");
   nav.classList.remove("is-open");
+  callMenu.open = false;
 };
 
 menuButton.addEventListener("click", () => {
@@ -20,7 +23,15 @@ nav
   .querySelectorAll("a")
   .forEach((link) => link.addEventListener("click", closeMenu));
 document.addEventListener("keydown", (e) => {
-  if (e.key === "Escape") closeMenu();
+  if (e.key !== "Escape") return;
+  // If the number list is open, close it and give focus back to its button
+  if (callMenu.open) callMenu.querySelector("summary").focus();
+  closeMenu();
+});
+
+// Clicking anywhere else closes the number list (<details> doesn't do this itself)
+document.addEventListener("click", (e) => {
+  if (callMenu.open && !callMenu.contains(e.target)) callMenu.open = false;
 });
 
 // Tapping anywhere outside the header also closes the menu
